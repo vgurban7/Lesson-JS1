@@ -13,18 +13,19 @@
 
 // let num = prompt('Введите число')
 // let deg = prompt('Введите степень')
-// alert(num ** deg);
+// console.log(num ** deg);
 
 /*Задание 5
 Создать произвольную переменную, присвоить ей значение.
 C помощью if написать условие: если переменная равна “hidden”, присвоить ей значение “visible”, иначе - “hidden”.*/
 
 // let num = 5;
-// if (num == 'hidden') {
-//    alert('visible');
+// if (num === 'hidden') {
+//    num = 'visible';
 // } else {
-//    alert('hidden');
+//    num = 'hidden';
 // }
+// console.log(num);
 
 /*Задание 6
 Создать переменную и присвоить ей число.
@@ -35,12 +36,15 @@ C помощью if написать условие: если переменна
 
 // let num = 5;
 // if (num === 0) {
-//    console.log(1);
+//    num = 1;
 // } else if (num < 0) {
-//    console.log('less then zero');
+//    num = 'less then zero';
+// } else if (num > 0) {
+//    num = num * 10
 // } else {
-//    console.log(num * 10);
+//    num = 'Неверное значение';
 // }
+// console.log(num);
 
 
 /*Задание 7
@@ -49,11 +53,15 @@ C помощью if написать условие: если переменна
 Создайте переменную-результат и присвойте ей значение: если введенное пользователем число меньше 5, то результат будет '0', если больше -  '1'. Выведите результат в консоль.*/
 
 // let num = +prompt('Запишите число');
+// let result;
 // if (num < 5) {
-//    console.log(0);
+//    result = 0;
+// } else if (num > 5) {
+//    result = 1;
 // } else {
-//    console.log(1);
+//    result = 'Неверное значение';
 // }
+// console.log(result);
 
 
 /*Задание 8
@@ -80,9 +88,9 @@ C помощью if написать условие: если переменна
 // let num2 = +prompt('Введите значение: ');
 // let num3 = num1 % num2;
 // if (num3 > 0) {
-//    console.log('Число ' + num1 + ' Не кратное' + ' Числу ' + num2);
+//    console.log('Число ' + num1 + ' Не кратное числу ' + num2);
 // } else {
-//    console.log('Число ' + num1 + ' Кратное' + ' Числу ' + num2);
+//    console.log('Число ' + num1 + ' Кратное числу ' + num2);
 // }
 
 
@@ -138,12 +146,12 @@ C помощью if написать условие: если переменна
 
 // let days = +prompt('Введите количество дней');
 // let price1 = 40;
-// let price2 = 50;
-// let price3 = 20;
+// let discount1 = 50;
+// let discount2 = 20;
 // if (days >= 7) {
-//    console.log(days * price1 - price2);
+//    console.log(days * price1 - discount1);
 // } else if (days >= 3) {
-//    console.log(days * price1 - price3);
+//    console.log(days * price1 - discount2);
 // } else if (days < 3) {
 //    console.log(days * price1);
 // } else {
