@@ -17,8 +17,8 @@ gender = (true) ? 'man' : 'woman';
 // 10 раз увеличить значение этой переменной на 1. Результат (1 шт.) вывести в консоль.
 
 let num = 10;
-for (let i = 10; i < 21; i++) {
-   num = i;
+for (let i = 0; i < 10; i++) {
+   num++;
 }
 console.log(num);
 
@@ -86,9 +86,7 @@ alert( `number ${i}!` );
 
 let i = 0;
 while (i < 3) {
-   if (i <= 3) {
-      alert(`number ${i}`);
-   } else { };
+   alert(i);
    i += 1;
 }
 
@@ -97,17 +95,17 @@ while (i < 3) {
 // Переписать задание 4 в виде функции. Т.е. описать функцию, которая выводит квадраты чисел из заданного
 // диапазона (диапазон будет попадать в функцию как аргументы).
 
-function drawSquareNum(number) {
-   if (number > 99) {
-      alert('Число больше 100')
-   } else {
-      for (let i = 0; i < number; i++) {
-         console.log(i ** 2);
-      }
+
+
+function drawSquareNum(from, to) {
+   for (let i = from; i < to; i++) {
+      console.log(i ** 2);
    }
 }
 
-drawSquareNum(4);
+drawSquareNum(0, 40);
+
+
 
 
 
@@ -123,11 +121,11 @@ drawSquareNum(4);
 // Каждый цвет - 3 числа, каждое число лежит в диапазоне от 0 до 255.
 // Одна функция может вызывать другую функцию
 
-
+function getRandomInteger(min, max) {
+   return Math.floor(Math.random() * (max - min)) + min;
+}
 function getRandomRGB() {
-   function getRandomInteger(min, max) {
-      return Math.floor(Math.random() * (max - min)) + min;
-   }
+
    console.log('rgb(', getRandomInteger(0, 255) + ',' + getRandomInteger(0, 255) + ',' + getRandomInteger(0, 255) + ')');
 }
 getRandomRGB();
@@ -147,8 +145,8 @@ getRandomRGB();
 
 
 
-function numberOutput() {
-   let num = +prompt();
+function numberOutput(num) {
+
    for (let i = 1; i < num; i += 0.5) {
       if (i % 1 === 0) {
          console.log(i, 'integer');
@@ -158,5 +156,5 @@ function numberOutput() {
    }
 }
 
-numberOutput();
+numberOutput(4);
 
