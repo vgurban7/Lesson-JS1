@@ -272,10 +272,12 @@ for (let i = 0; i < users.length; i++) {
 
 
 let vegetables = ["морковь", "баклажан", "репа", "топинамбур"];
-let arrayObj = [];
+let yOarrabj = [];
+let vaj = {};
 for (let i = 0; i < vegetables.length; i++) {
-   arrayObj.push(`word: '${vegetables[i]}' length: ${vegetables[i].length}`)
-} console.log(arrayObj);
-for (let i = 0; i < arrayObj.length; i++) {
-   console.log(vegetables[i] + '-' + vegetables[i].length);
+   vaj = { word: vegetables[i], length: vegetables[i].length }
+   yOarrabj.push(vaj)
+} console.log(yOarrabj);
+for (let i = 0; i < yOarrabj.length; i++) {
+   console.log(`${yOarrabj[i].word} - ${yOarrabj[i].length} `);
 }
