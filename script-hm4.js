@@ -12,15 +12,15 @@
 
 
 let sunNumber = function (a, b) {
-   if (a === undefined || b === undefined) {
+   if (arguments.length !== 2) {
       console.log('введите два параметра');
-   } else if (a / 1 !== a || b / 1 !== b) {
+   } else if (typeof a !== 'number' || typeof b !== 'number') {
       console.log('введенные данные не являются числами');
    } else { console.log(a + b); };
 
 
 }
-sunNumber(1, 3)
+sunNumber(1, 4)
 
 
 
@@ -33,11 +33,11 @@ sunNumber(1, 3)
 
 
 function square(a) {
-   a === undefined ? alert('Функция "square" не может быть вызвана без аргумента') : console.log(a * a)
+   a === undefined ? console.error('Функция "square" не может быть вызвана без аргумента') : console.log(a * a)
 
 }
 
-square()
+square(5)
 
 
 
@@ -52,9 +52,8 @@ square()
 // Написать функцию в стрелочном синтаксисе.
 
 
-let getRandomInteger = Math.floor(Math.random() * (10 - 0)) + 0;
-
 let guessNumber = (num) => {
+   let getRandomInteger = Math.floor(Math.random() * (10));
    if (num >= 0 && num <= 10 && num === getRandomInteger) {
       console.log('Вы выиграли !');
    } else if (num <= 10 && num >= 0 && num !== getRandomInteger) {
@@ -101,7 +100,11 @@ console.log(filterFor(arr, 3.11));
 
 
 let numArray = [1, 3, 4, 7]
-numArray.map(number => number);
+function copyArr(arr) {
+   return console.log(arr.map(number => number));
+}
+
+copyArr(numArray)
 
 
 
